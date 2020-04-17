@@ -1,0 +1,342 @@
+import React, { Component } from 'react';
+<<<<<<< HEAD
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
+import $ from 'jquery';
+window.$ = $;
+
+class App extends Component {
+  render(){
+    $(function(){
+      var output = "";
+      var header = "";
+
+      output += "<div id=\"carouselIndicators\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">"+
+                      "<ol class=\"carousel-indicators\">"+
+                        "<li data-target=\"#carouselIndicators\" data-slide-to=\"0\" class=\"active\"></li>"+
+                        "<li data-target=\"#carouselIndicators\" data-slide-to=\"1\"></li>"+
+                        "<li data-target=\"#carouselIndicators\" data-slide-to=\"2\"></li>"+
+                      "</ol>"+
+                      "<div class=\"carousel-inner\" role=\"listbox\">"+
+                        "<div class=\"carousel-item active\">"+
+                          "<img class=\"d-block w-100\" src=\"images/20986.jpg\" alt=\"First slide\">"+
+                          "<div class=\"container\">"+
+                            "<div class=\"carousel-caption\">"+
+                              "<h1>Sign up!</h1>"+
+                              "<p>Shop all your favorites book, obtain discounts, get the news first! Just join now!</p>"+
+                              "<p><a class=\"btn btn-lg btn-primary\" href=\"/Logging\" role=\"button\">Sign-up</a></p>"+
+                            "</div>"+
+                          "</div>"+
+                        "</div>"+
+                        "<div class=\"carousel-item\">"+
+                          "<img class=\"d-block w-100\" src=\"images/20990.jpg\" alt=\"Second slide\">"+
+                          "<div class=\"container\" style=\"padding-top:-100px;\">"+
+                            "<div class=\"carousel-caption\">"+
+                              "<h1>Find us in Social Media</h1>"+
+                              "<p>"+
+                              "<a href=\"#\" class=\"fa fa-facebook\" style=\"font-size:25px;color:white;\"></a>"+
+                              "<a href=\"#\" class=\"fa fa-google\" style=\"font-size:25px;color:white;\"></a>"+
+                              "<a href=\"#\" class=\"fa fa-linkedin\" style=\"font-size:25px;color:white;\"></a>"+
+                              "<a href=\"#\" class=\"fa fa-twitter\" style=\"font-size:25px;color:white;\"></a>"+
+                              "</p>"+
+                            "</div>"+
+                          "</div>"+
+                        "</div>"+
+                        "<div class=\"carousel-item\">"+
+                          "<img class=\"d-block w-100\" src=\"images/20999.jpg\" alt=\"Third slide\">"+
+                          "<div class=\"container\" style=\"padding-top:-100px;\">"+
+                            "<div class=\"carousel-caption\">"+
+                              "<h1>Top Sellers Books</h1>"+
+                              "<p>Don't forget to look at the bestsellers books of the year!</p>"+
+                              "<p><a class=\"btn btn-lg btn-primary\" href=\"/Product\" role=\"button\">Browse Bestsellers</a></p>"+
+                            "</div>"+
+                          "</div>"+
+                        "</div>"+
+                      "</div>"+
+                      "<a class=\"carousel-control-prev\" href=\"#carouselIndicators\" role=\"button\" data-slide=\"prev\">"+
+                        "<span class=\"carousel-control-prev-icon\" aria-hidden=\"true\"></span>"+
+                        "<span class=\"sr-only\">Previous</span>"+
+                      "</a>"+
+                      "<a class=\"carousel-control-next\" href=\"#carouselIndicators\" role=\"button\" data-slide=\"next\">"+
+                        "<span class=\"carousel-control-next-icon\" aria-hidden=\"true\"></span>"+
+                        "<span class=\"sr-only\">Next</span>"+
+                      "</a>"+
+                    "</div>";
+        $('.app-container').html(output);
+
+        header += "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">"+
+                    "<div class=\"container\">"+
+                      "<a class=\"navbar-brand\" href=\"#\">"+
+                        "<img src=\"images/amazon.png\" width=\"50\" height=\"30\">"+
+                      "</a>"+
+                      "<button class=\"navbar-toggler\" type=\"button\" data-toggle=\"collapse\" data-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">"+
+                        "<span class=\"navbar-toggler-icon\"></span>"+
+                      "</button>"+
+                      "<div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">"+
+                        "<ul class=\"navbar-nav mr-auto\">"+
+                          "<li class=\"nav-item active dropdown\">"+
+                            "<a class=\"nav-link dropdown-toggle color-me\" href=\"#\" id=\"navbarDropdown\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">"+
+                              "Products"+
+                            "</a>"+
+                            "<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">"+
+                              "<a class=\"dropdown-item\" href=\"/Product\">sort by title</a>"+
+                              "<a class=\"dropdown-item\" href=\"/Product\">sort by author</a>"+
+                              "<a class=\"dropdown-item\" href=\"/Product\">sort by price</a>"+
+                              "<a class=\"dropdown-item\" href=\"/Product\">sort by book rating</a>"+
+                              "<a class=\"dropdown-item\" href=\"/Product\">sort by release day</a>"+
+                              "<a class=\"dropdown-item\" href=\"/Product\">sort by top seller</a>"+                                                          
+                            "</div>"+
+                          "</li>"+
+                          "<li class=\"nav-item\">"+
+                            "<a class=\"nav-link\" href=\"#\">Contact</a>"+
+                          "</li>"+
+                        "</ul>"+
+                        "<ul class=\"navbar-nav float-right\">"+
+                          "<li class=\"nav-item\">"+
+                            "<a class=\"nav-link\" href=\"/Logging\">Log in</a>"+
+                          "</li>"+ 
+                          "<li class=\"nav-item\">"+
+                            "<a class=\"nav-link\" href=\'/Register\'>Register</a>"+
+                          "</li>"+                       
+                        "</ul>"+
+                      "</div>"+
+                    "</div>"+
+                  "</nav>";
+        $('.header-container').html(header);
+    });
+
+    return (
+        <div className = "body-container">
+          <div className = "header-container">{this.header}</div>
+          <div className = "app-container">{this.output}</div>
+        </div>
+    );
+  }
+}
+
+
+
+export default App;
+=======
+import axios from 'axios';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './Register.css';
+import $ from 'jquery';
+window.$ = $;
+
+class Register extends Component {
+
+    constructor(props){
+        super(props);
+        this.state = {
+            name: '',
+            email:'',
+            phone:'',
+            nickname:'',
+            username:'',
+            password:'',
+            shippingStreet:'',
+            shippingApartmentNumber:'',
+            shippingCity:'',
+            shippingState:'',
+            shippingCountry:'',
+            shippingZip:'',
+            creditCardNumber:'',
+            creditCardName:'',
+            expirationYear:'',
+            expirationMonth:'',
+            cardVerificationValue:'',
+            message: null
+        }
+        this.newCustomer = this.newCustomer.bind(this);
+    }
+
+    newCustomer = (e) => {
+        e.preventDefault();
+        let customer = {
+            name: this.state.name,
+            email: this.state.email,
+            phone: this.state.phone,
+            nickname: this.state.nickname,
+            username: this.state.username,
+            password: this.state.password,
+            shippingStreet: this.state.shippingStreet,
+            shippingApartmentNumber: this.state.shippingApartmentNumber,
+            shippingCity: this.state.shippingCity,
+            shippingState: this.state.shippingState,
+            shippingCountry: this.state.shippingCountry,
+            shippingZip: this.state.shippingZip,
+            creditCardNumber: this.state.creditCardNumber,
+            creditCardName: this.state.creditCardName,
+            expirationYear: this.state.expirationYear,
+            expirationMonth: this.state.expirationMonth,
+            cardVerificationValue: this.state.cardVerificationValue
+        };
+
+        ApiService.registerService(customer)
+            .then(res => {
+                    this.setState({message: 'new customer registered successfully'});
+            });
+    }
+
+    onChange = (e) => thus.setState({[e.target.name]: e.target.value});
+
+
+	render(){
+		$(function(){
+			var output = "";
+
+			output += "<div class=\"container-wrapper\">"+
+						"<div class=\"pb-2 mt-4 mb-2 border-bottom\">"+
+            				"<h1>Register Customer</h1>"+
+        					"<p><b>Please fill in your information below:</b></p>"+
+        					"<p class=\"lead\">Alrady have account? just <a href = \'./Logging\'>sign in</a></p>"+
+        				"</div>"+
+
+ 						"<form>"+
+        				"<h3><b>Basic Info</b></h3>"+
+        				"<div class=\"row justify-content-md-center\">"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"name\">Name</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"customerName\" id=\"name\" maxlength=\"20\" class=\"form-Control border-width: 2px border-color: grey;\">"+
+            				"</div>"+
+        				"</div>"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"email\">Email</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"customerEmail\" id=\"email\" maxlength=\"20\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"phone\">Phone</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"customerPhone\" id=\"phone\" maxlength=\"15\" class=\"form-Control\">"+
+            				"</div>"+
+       					"</div></div>"+
+       					"<div class=\"row justify-content-md-center\">"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"nickname\">Nickname</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"nickname\" id=\"nickname\" maxlength=\"10\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"username\">Username</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"username\" id=\"username\" maxlength=\"10\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"password\">Password</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"password\" id=\"password\" maxlength=\"16\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div></div>"+
+
+        				"<h3><b>Shipping Address</b></h3>"+
+        				"<div class=\"row justify-content-md-center\">"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"shippingStreet\">Street Name</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"streetName\" id=\"shippingStreet\" maxlength=\"20\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"shippingApartmentNumber\">Apartment Number</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"apartmentNumber\" id=\"shippingApartmentNumber\" maxlength=\"5\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div></div>"+
+        				"<div class=\"row justify-content-md-center\">"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"shippingCity\">City</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"city\" id=\"shippingCity\" maxlength=\"10\" class=\"form-Control\">"+
+            				"</div>"+
+       					"</div>"+
+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"shippingState\">State</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"state\" id=\"shippingState\" maxlength=\"10\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"shippingCountry\">Country</label>"+
+            				"<div class=\"col-md-6\">"+            				
+            					"<input type=\"country\" id=\"shippingCountry\" maxlength=\"10\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"shippingZip\">Zipcode</label>"+
+             				"<div class=\"col-md-4\">"+           				
+            					"<input type=\"zipCode\" id=\"shippingZip\" maxlength=\"5\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div></div>"+
+
+        				"<h3><b>Credit Card Info</b></h3>"+
+        				"<div class=\"row justify-content-md-center\">"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"creditCardNumber\">Credit Card Number</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"creditCardNumber\" id=\"creditCardNumber\" maxlength=\"16\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"creditCardName\">Name on the Credit Card</label>"+
+            				"<div class=\"col-md-6\">"+
+            					"<input type=\"creditCardName\" id=\"creditCardName\" maxlength=\"20\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div></div>"+
+        				"<div class=\"row justify-content-md-center\">"+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"expirationMonth\">Expiration Month (MM)</label>"+
+            				"<div class=\"col-sm-4\">"+
+            					"<input type=\"expirationMonth\" id=\"expirationMonth\" maxlength=\"2\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"expirationYear\">Expiration Year (YYYY)</label>"+
+            				"<div class=\"col-sm-6\">"+
+            					"<input type=\"expirationYear\" id=\"expirationYear\" maxlength=\"4\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div>"+
+
+        				"<div class=\"form-group\">"+
+            				"<label for=\"cardVerificationValue\">CVV</label>"+
+            				"<div class=\"col-sm-4\">"+
+            					"<input type=\"cardVerificationValue\" id=\"cardVerificationValue\" maxlength=\"3\" class=\"form-Control\">"+
+            				"</div>"+
+        				"</div></div>"+
+
+        				"<br><br>"+
+        				"<div class=\"row justify-content-md-center\">"+
+
+        					"<div class=\"col-sm-2\">"+
+        							"<input type=\"submit\" value=\"submit\" class=\"btn btn-sm btn-primary btn-block text-uppercase\">"+
+        					"</div>"+
+        					"<div class=\"col-sm-2\">"+
+        							"<input type=\"submit\" value=\"cancel\" class=\"btn btn-sm btn-default btn-block text-uppercase\">"+
+        					"</div>"+
+        				"</div>"+
+        				"</form>"+
+        			  "</div>";
+        	$('.app-container').html(output);       				
+		});
+
+		return(
+        <div className = "body-container">
+          <div className = "app-container">{this.output}</div>
+        </div>
+		);
+	}
+}
+
+export default Register;
+>>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
+
