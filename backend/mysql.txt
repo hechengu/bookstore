@@ -26,12 +26,9 @@ cardVerificationValue INT(3) NOT NULL
 INSERT INTO Customers(name, email, phone, nickname, username, password, shippingStreet, shippingApartmentNumber, shippingCity, shippingState, shippingCountry, shippingZip, creditCardNumber,creditCardName,expirationMonth, expirationYear, cardVerificationValue) VALUES ('aaa','aaa@gmail.com', '1111111111', 'aaa', 'aaa', '123abc', 'aaa', 'a12', 'aaa', 'aa', 'citya', 12345, '1111111111111111', 'aaa', 11, 1, 123);
 
 DROP TABLE Customers;
-<<<<<<< HEAD
 
 DELETE FROM Customers WHERE id=7;
 
-=======
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
  
 FLUSH PRIVILEGES;
 GRANT ALL ON *.* To 'root'@'localhost' IDENTIFIED BY '911GT3RS';

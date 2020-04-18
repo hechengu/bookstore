@@ -55,17 +55,7 @@ class Register extends Component {
             cardVerificationValue: this.state.cardVerificationValue
         };
 
-<<<<<<< HEAD
-        //this.registerService(customer).then(res => { this.setState({ message : res.data})});
-        window.location = "/RegisterSuccess";
-=======
-        this.registerService(customer).then(res => {console.log(res.data); this.setState({ message : res.data})});
-        /*service.registerService(customer)
-            .then(res => {
-                    this.setState({message: 'new customer registered successfully'});
-            });
-        */
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
+        this.registerService(customer).then(res => { this.setState({ message : res.data})});
     }
 
     registerService(customer){
@@ -79,17 +69,19 @@ class Register extends Component {
 
     onChange = (e) => this.setState({[e.target.name]: e.target.value});
 
-
-
-<<<<<<< HEAD
-    render(){
-
-        return(
-=======
 	render(){
+            if(this.state.message !== null){
+            //console.log(this.state.message);
+            if(this.state.message==="false"){
+                alert("This username has been used, please choose another one and regisster again");
+                this.state.message = null;
+            }
+            else{
+                window.location = "/RegisterSuccess"; 
+            }
+        }
 
 		return(
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
             <div className="container-wrapper">
                 <div className="pb-2 mt-4 mb-2">
                     <h1>Register Customer</h1>
@@ -227,12 +219,8 @@ class Register extends Component {
                         </div>
                 </form>
             </div>
-            );
-<<<<<<< HEAD
+        );
     }
-=======
-	}
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
 }
 
 export default Register;

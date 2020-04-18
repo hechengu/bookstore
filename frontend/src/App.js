@@ -5,7 +5,6 @@ import $ from 'jquery';
 window.$ = $;
 
 class App extends Component {
-<<<<<<< HEAD
     render(){
       var urlParams = new URLSearchParams(window.location.search);
       var user = urlParams.get('User');
@@ -15,15 +14,7 @@ class App extends Component {
         var header = "";
 
         if(user==null){
-          output += "<div id=\"carouselIndicators\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">"+
-=======
-  render(){
-    $(function(){
-      var output = "";
-      var header = "";
-
-      output += "<div id=\"carouselIndicators\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">"+
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
+      		output += "<div id=\"carouselIndicators\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">"+
                       "<ol class=\"carousel-indicators\">"+
                         "<li data-target=\"#carouselIndicators\" data-slide-to=\"0\" class=\"active\"></li>"+
                         "<li data-target=\"#carouselIndicators\" data-slide-to=\"1\"></li>"+
@@ -36,11 +27,7 @@ class App extends Component {
                             "<div class=\"carousel-caption\">"+
                               "<h1>Sign up!</h1>"+
                               "<p>Shop all your favorites book, obtain discounts, get the news first! Just join now!</p>"+
-<<<<<<< HEAD
                               "<p><a class=\"btn btn-lg btn-primary\" href=\"/Logging\" role=\"button\">Sign-up</a></p>"+
-=======
-                              "<p><a class=\"btn btn-lg btn-primary\" href=\"./Logging\" role=\"button\">Sign-up</a></p>"+
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
                             "</div>"+
                           "</div>"+
                         "</div>"+
@@ -64,11 +51,7 @@ class App extends Component {
                             "<div class=\"carousel-caption\">"+
                               "<h1>Top Sellers Books</h1>"+
                               "<p>Don't forget to look at the bestsellers books of the year!</p>"+
-<<<<<<< HEAD
                               "<p><a class=\"btn btn-lg btn-primary\" href=\"/ProductF\" role=\"button\">Browse Bestsellers</a></p>"+
-=======
-                              "<p><a class=\"btn btn-lg btn-primary\" href=\"./Product\" role=\"button\">Browse Bestsellers</a></p>"+
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
                             "</div>"+
                           "</div>"+
                         "</div>"+
@@ -82,15 +65,9 @@ class App extends Component {
                         "<span class=\"sr-only\">Next</span>"+
                       "</a>"+
                     "</div>";
-<<<<<<< HEAD
-          $('.app-container').html(output);
+          	$('.app-container').html(output);
 
-          header += "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">"+
-=======
-        $('.app-container').html(output);
-
-        header += "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">"+
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
+        	header += "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">"+
                     "<div class=\"container\">"+
                       "<a class=\"navbar-brand\" href=\"#\">"+
                         "<img src=\"images/amazon.png\" width=\"50\" height=\"30\">"+
@@ -105,21 +82,18 @@ class App extends Component {
                               "Products"+
                             "</a>"+
                             "<div class=\"dropdown-menu\" aria-labelledby=\"navbarDropdown\">"+
-<<<<<<< HEAD
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by title</a>"+
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by author</a>"+
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by price</a>"+
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by book rating</a>"+
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by release day</a>"+
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by top seller</a>"+                                                          
-=======
                               "<a class=\"dropdown-item\" href=\"./Product\">sort by title</a>"+
                               "<a class=\"dropdown-item\" href=\"./Product\">sort by author</a>"+
                               "<a class=\"dropdown-item\" href=\"./Product\">sort by price</a>"+
                               "<a class=\"dropdown-item\" href=\"./Product\">sort by book rating</a>"+
                               "<a class=\"dropdown-item\" href=\"./Product\">sort by release day</a>"+
                               "<a class=\"dropdown-item\" href=\"./Product\">sort by top seller</a>"+                                                          
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
                             "</div>"+
                           "</li>"+
                           "<li class=\"nav-item\">"+
@@ -128,27 +102,19 @@ class App extends Component {
                         "</ul>"+
                         "<ul class=\"navbar-nav float-right\">"+
                           "<li class=\"nav-item\">"+
-<<<<<<< HEAD
                             "<a class=\"nav-link\" href=\"/Logging\">Log in</a>"+
                           "</li>"+ 
                           "<li class=\"nav-item\">"+
                             "<a class=\"nav-link\" href=\'/Register\'>Register</a>"+
-=======
-                            "<a class=\"nav-link\" href=\"./Logging\">Log in</a>"+
-                          "</li>"+ 
-                          "<li class=\"nav-item\">"+
-                            "<a class=\"nav-link\" href=\'./Register\'>Register</a>"+
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
-                          "</li>"+                       
+                          "</li>"+                     
                         "</ul>"+
                       "</div>"+
                     "</div>"+
                   "</nav>";
-<<<<<<< HEAD
-          $('.header-container').html(header);
+          	$('.header-container').html(header);
         }
         else{
-          output += "<div id=\"carouselIndicators\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">"+
+          	output += "<div id=\"carouselIndicators\" class=\"carousel slide\" data-ride=\"carousel\" data-interval=\"5000\">"+
                       "<ol class=\"carousel-indicators\">"+
                         "<li data-target=\"#carouselIndicators\" data-slide-to=\"0\" class=\"active\"></li>"+
                         "<li data-target=\"#carouselIndicators\" data-slide-to=\"1\"></li>"+
@@ -191,9 +157,9 @@ class App extends Component {
                         "<span class=\"sr-only\">Next</span>"+
                       "</a>"+
                     "</div>";
-          $('.app-container').html(output);
+          	$('.app-container').html(output);
 
-          header += "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">"+
+          	header += "<nav class=\"navbar navbar-expand-lg navbar-dark bg-dark\">"+
                     "<div class=\"container\">"+
                       "<a class=\"navbar-brand\" href=\"#\">"+
                         "<img src=\"images/amazon.png\" width=\"50\" height=\"30\">"+
@@ -228,24 +194,16 @@ class App extends Component {
                       "</div>"+
                     "</div>"+
                   "</nav>";
-          $('.header-container').html(header);
+          	$('.header-container').html(header);
         }
-      });
-=======
-        $('.header-container').html(header);
-    });
+     });
 
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
     return (
         <div className = "body-container">
           <div className = "header-container">{this.header}</div>
           <div className = "app-container">{this.output}</div>
         </div>
     );
-<<<<<<< HEAD
-
-=======
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
   }
 }
 

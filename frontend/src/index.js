@@ -5,11 +5,8 @@ import './index.css';
 import Register from './Register';
 import Logging from './Logging';
 import Product from './Product';
-<<<<<<< HEAD
 import RegisterSuccess from './RegisterSuccess';
 import ProductF from './ProductF';
-=======
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -19,11 +16,8 @@ const routing = (
 		<Route path="/Register" component={Register} />
 		<Route path="/Logging" component={Logging}/>
 		<Route path="/Product" component={Product}/>
-<<<<<<< HEAD
 		<Route path="/RegisterSuccess" component={RegisterSuccess}/>
 		<Route path="/ProductF" component={ProductF}/>
-=======
->>>>>>> 64d27994404f95a8abe96741968074c6395b0c2e
 	</Router>
 );
 
