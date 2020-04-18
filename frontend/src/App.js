@@ -87,13 +87,7 @@ class App extends Component {
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by price</a>"+
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by book rating</a>"+
                               "<a class=\"dropdown-item\" href=\"/ProductF\">sort by release day</a>"+
-                              "<a class=\"dropdown-item\" href=\"/ProductF\">sort by top seller</a>"+                                                          
-                              "<a class=\"dropdown-item\" href=\"./Product\">sort by title</a>"+
-                              "<a class=\"dropdown-item\" href=\"./Product\">sort by author</a>"+
-                              "<a class=\"dropdown-item\" href=\"./Product\">sort by price</a>"+
-                              "<a class=\"dropdown-item\" href=\"./Product\">sort by book rating</a>"+
-                              "<a class=\"dropdown-item\" href=\"./Product\">sort by release day</a>"+
-                              "<a class=\"dropdown-item\" href=\"./Product\">sort by top seller</a>"+                                                          
+                              "<a class=\"dropdown-item\" href=\"/ProductF\">sort by top seller</a>"+                                                                                                                  
                             "</div>"+
                           "</li>"+
                           "<li class=\"nav-item\">"+
