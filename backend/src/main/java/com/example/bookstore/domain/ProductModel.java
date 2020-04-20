@@ -80,7 +80,7 @@ public class ProductModel {
 		this.PRODUCTPUBLISHER = PRODUCTPUBLISHER;
 	}		
 	public String getReleaseDate() {
-		return PRODUCTRELEASEDATE;
+		return PRODUCTRELEASEDATE.substring(0,10);
 	}	
 	public void setReleaseDate(String PRODUCTRELEASEDATE) {
 		this.PRODUCTRELEASEDATE = PRODUCTRELEASEDATE;
