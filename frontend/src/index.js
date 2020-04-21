@@ -7,6 +7,7 @@ import Logging from './Logging';
 import Product from './Product';
 import RegisterSuccess from './RegisterSuccess';
 import ProductF from './ProductF';
+import Details from './Details';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 
@@ -18,6 +19,7 @@ const routing = (
 		<Route path="/Product" component={Product}/>
 		<Route path="/RegisterSuccess" component={RegisterSuccess}/>
 		<Route path="/ProductF" component={ProductF}/>
+		<Route path="/Details" component={Details}/>
 	</Router>
 );
 

@@ -103,10 +103,10 @@ public class ProductModel {
 	public void setUnit(int UNITINSTOCK) {
 		this.UNITINSTOCK = UNITINSTOCK;
 	}	
-	public double getpeopelRating() {
+	public double getpeopleRating() {
 		return NUMRATING;
 	}
-	public void setpeopelRating(double NUMRATING) {
+	public void setpeopleRating(double NUMRATING) {
 		this.NUMRATING = NUMRATING;
 	}	
 	public double getRating() {

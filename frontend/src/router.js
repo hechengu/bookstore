@@ -5,6 +5,7 @@ import { Logging } from './Logging.js';
 import { Product } from './Product.js';
 import { RegisterSuccess } from './RegisterSuccess.js';
 import { ProductF } from './ProductF.js';
+import { Details } from './Details.js';
 
 
 const createRoutes = () => (
@@ -15,6 +16,7 @@ const createRoutes = () => (
 	<Route exact path='./RegisterSuccess' component = {RegisterSuccess} />
 	<Route exact path='./ProductF' component = {ProductF} />	
 	<Route exact path='./Product' component = {Product} />	
+	<Route exact path='./Details' component = {Details} />	
 	</Router>
 );
 
